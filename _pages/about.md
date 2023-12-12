@@ -8,6 +8,9 @@ redirect_from:
   - /about.html
 ---
 
+About me
+===
+
 I am an assistant professor (RTD-A) in Computer Science at the University of Pisa. My research focuses on Machine Learning (ML), deep learning, generative models, and learning in structured domains (sequences, trees, graphs).
 
-Yes, this site is under construction. But some day, it will be not.
+Yes, this site is under construction. But some day, it won't be.
