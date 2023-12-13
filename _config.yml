@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "MP"
 title_separator          : "-"
 name                     : &name "Marco Podda"
-description              : &description "personal description"
+description              : &description "Personal website"
 url                      : https://marcopodda.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "marcopodda/marcopodda.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Marco Podda"
   avatar           : "profile.jpg"
-  bio              : "Born and bred in Sardinia. Researching ML in Pisa."
+  bio              : "Born and bred in Sardinia, researching ML in Pisa."
   location         : "Pisa"
   employer         :
   pubmed           :
