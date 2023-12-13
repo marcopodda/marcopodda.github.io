@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : ""
+title                    : "MP"
 title_separator          : "-"
 name                     : &name "Marco Podda"
 description              : &description "personal description"
