@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Marco Podda - UniPI"
+title                    : ""
 title_separator          : "-"
 name                     : &name "Marco Podda"
 description              : &description "personal description"
