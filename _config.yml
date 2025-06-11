@@ -29,8 +29,8 @@ plugins:
 scholar:
   style: apa # or ieee, chicago-fullnote-bibliography, etc.
   locale: en
-  source: _bibliography/references.bib # Path to your bib file
-  repository: _bibliography/references.bib # Often same as source
+  source: _bibliography # Path to your bib file
+  repository: references.bib # Often same as source
   bibliography_template: biblio.html # Custom layout for each publication entry
   group_by: year
   order: descending # Newest publications first
