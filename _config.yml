@@ -1,0 +1,55 @@
+# Site settings
+title: "John Doe - Academic Researcher"
+email: "your.email@example.com"
+description: "Personal website of John Doe, a Machine Learning researcher specializing in [Specific Area 1] and [Specific Area 2]."
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "https://your_username.github.io" # The base hostname & protocol for your site
+timezone: Europe/Rome # Set your timezone for correct date/time
+lang: en # Site language
+
+# Author/Contact Information
+author:
+  name: "John Doe"
+  email: "your.email@example.com"
+  linkedin: "your_linkedin_profile"
+  github: "your_github_username"
+  google_scholar: "your_google_scholar_id" # E.g., ABCDEFG_HIJ from your profile URL
+  twitter: "your_twitter_username" # Optional
+
+# Build settings
+markdown: kramdown
+theme: minima # The default Jekyll theme, you can remove this later if fully custom
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-scholar # Crucial for publications
+
+# jekyll-scholar configuration (adjust as needed)
+scholar:
+  style: apa # or ieee, chicago-fullnote-bibliography, etc.
+  locale: en
+  source: _bibliography/references.bib # Path to your bib file
+  repository: _bibliography/references.bib # Often same as source
+  bibliography_template: biblio.html # Custom layout for each publication entry
+  group_by: year
+  order: descending # Newest publications first
+  group_order: descending
+  # query: "@article[year>2020]" # Example: only articles from 2020 onwards
+  # To show all entries: query: '*'
+
+# Exclude from processing.
+# The `_bibliography` folder is where your .bib file resides.
+# The `vendor` folder contains Bundler dependencies.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - CNAME # If you add a custom domain later

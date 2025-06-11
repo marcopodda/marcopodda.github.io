@@ -1,0 +1,347 @@
+---
+# This ensures Jekyll processes this file as SCSS
+---
+@charset "utf-8";
+
+// Base variables (customize colors, fonts, etc.)
+$text-color: #333;
+$background-color: #fff;
+$brand-color: #007bff; // A nice blue
+$link-color: $brand-color;
+$link-hover-color: darken($link-color, 15%);
+$border-color: #e0e0e0;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-family-heading: $font-family-base;
+$font-size-base: 1.1rem;
+$max-width: 960px;
+$spacing-unit: 30px;
+
+// Mixins (optional, but good practice for responsive design)
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// General styling
+html {
+    font-size: 16px;
+}
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: 1.6;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.wrapper {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+    @include media-query($max-width + $spacing-unit * 2) {
+        max-width: 100%;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-heading;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+ul, ol {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+}
+
+// Header styling
+.site-header {
+    border-bottom: 1px solid $border-color;
+    min-height: 56px;
+    position: relative;
+    padding: $spacing-unit 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    display: block;
+    color: $text-color;
+    &:hover {
+        color: $text-color;
+        text-decoration: none;
+    }
+}
+
+// Navigation
+.site-nav {
+    line-height: 56px;
+    .nav-trigger {
+        display: none;
+    }
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        @include media-query($max-width / 1.5) { // Adjust breakpoint as needed
+            display: block;
+            float: right;
+            width: 36px;
+            height: 25px;
+            line-height: 0;
+            padding-top: 9px;
+            text-align: center;
+            svg {
+                fill: $text-color;
+            }
+        }
+    }
+    .trigger {
+        @include media-query($max-width / 1.5) {
+            clear: both;
+            display: none;
+        }
+    }
+    .page-link {
+        color: $text-color;
+        line-height: $spacing-unit;
+        margin-left: 20px;
+        &:not(:last-child) {
+            margin-right: 0px;
+        }
+        &:hover {
+            color: $link-hover-color;
+        }
+        @include media-query($max-width / 1.5) {
+            display: block;
+            padding: 5px 0;
+            margin-left: 0;
+        }
+    }
+    .nav-trigger:checked + label + .trigger {
+        @include media-query($max-width / 1.5) {
+            display: block;
+        }
+    }
+}
+
+// Main content area
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+// Footer
+.site-footer {
+    border-top: 1px solid $border-color;
+    padding: $spacing-unit 0;
+    text-align: center;
+    font-size: 0.9rem;
+    .footer-col-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: $spacing-unit / 2;
+        @include media-query($max-width / 1.5) {
+            flex-direction: column;
+        }
+    }
+    .footer-col {
+        flex-basis: 33.333%;
+        padding: 0 10px;
+        margin-bottom: 1em;
+        @include media-query($max-width / 1.5) {
+            flex-basis: 100%;
+            text-align: center;
+            padding: 0;
+        }
+    }
+    .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin-bottom: 0.5em;
+        }
+    }
+    .social-links {
+        margin-top: 1em;
+        a {
+            display: inline-block;
+            margin: 0 10px 10px 0;
+            font-size: 1.1rem;
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+// Specific styles for pages (e.g., CV, Teaching)
+.post-header {
+    margin-bottom: $spacing-unit;
+    text-align: center;
+}
+
+// Image styling
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; // Center images by default
+}
+
+.align-left { float: left; margin-right: 1em; }
+.align-right { float: right; margin-left: 1em; }
+.align-center { display: block; margin-left: auto; margin-right: auto; }
+
+// Button styling
+.btn {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background-color: $brand-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: darken($brand-color, 10%);
+        text-decoration: none;
+    }
+}
+
+// Clearfix for floated content
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// Publications specific styles
+.publication {
+  margin-bottom: $spacing-unit * 1.5;
+  padding-bottom: $spacing-unit / 2;
+  border-bottom: 1px dashed $border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .reference {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+  }
+
+  .pub-links {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    .btn-link {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: lighten($brand-color, 40%);
+        color: $brand-color;
+        border: 1px solid $brand-color;
+        border-radius: 3px;
+        font-size: 0.9em;
+        margin-right: 10px;
+        &:hover {
+            background-color: $brand-color;
+            color: white;
+            text-decoration: none;
+        }
+    }
+  }
+
+  .tags {
+    margin-top: 0.5em;
+    font-size: 0.85em;
+    color: #555;
+
+    .tag {
+      display: inline-block;
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 4px 8px;
+      border-radius: 3px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      white-space: nowrap;
+      font-weight: 500;
+      border: 1px solid #ddd;
+    }
+  }
+}
+
+// CV specific styles
+.cv-entry {
+  margin-bottom: 1.5em;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    font-size: 1.3rem;
+  }
+  p {
+    margin-bottom: 0.5em;
+  }
+}
+
+.cv-skills {
+  p {
+    margin-bottom: 0.8em;
+  }
+}
+
+// Teaching specific styles
+.teaching-entry {
+  margin-bottom: 2em;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    font-size: 1.3rem;
+  }
+  p {
+    margin-bottom: 0.5em;
+  }
+  .btn-link { // Reuse button styling from publications if needed
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: lighten($brand-color, 40%);
+    color: $brand-color;
+    border: 1px solid $brand-color;
+    border-radius: 3px;
+    font-size: 0.9em;
+    margin-top: 5px;
+    &:hover {
+        background-color: $brand-color;
+        color: white;
+        text-decoration: none;
+    }
+  }
+}
