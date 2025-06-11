@@ -11,10 +11,12 @@ lang: en # Site language
 author:
   name: "Marco Podda"
   email: "marco.podda@unipi.it"
-  linkedin: "your_linkedin_profile"
   github: "marcopodda"
-  google_scholar: "your_google_scholar_id" # E.g., ABCDEFG_HIJ from your profile URL
-  twitter: "your_twitter_username" # Optional
+
+social:
+  github: marcopodda
+  google_scholar: pDMrAqgAAAAJ
+  linkedin: marcopodda
 
 # Build settings
 markdown: kramdown
@@ -29,7 +31,7 @@ scholar:
   style: apa # or ieee, chicago-fullnote-bibliography, etc.
   locale: en
 
-  sort_by: none # No specific sorting in this example, but can be 'year', 'author', etc.
+  sort_by: year # No specific sorting in this example, but can be 'year', 'author', etc.
   order: ascending # Or 'descending'
 
   # --- CRITICAL CHANGE HERE ---

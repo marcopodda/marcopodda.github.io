@@ -1,30 +1,40 @@
 ---
-layout: page
-title: About Me
-permalink: / # This makes it the root page
+layout: default # Use your default layout
+title: Marco Podda - Researcher # A good title for your homepage
 ---
 
-<div class="clearfix">
-    <img src="{{ "/assets/images/profile.jpg" | relative_url }}" alt="Your Name" class="align-right" style="max-width: 250px; border-radius: 5px; margin-bottom: 1em;">
+<section class="hero-section">
+  <div class="container">
+    <h1>Hello, I'm Marco Podda.</h1>
+    <p class="tagline">
+      My main research interest is on <b>Machine Learning for graphs</b>. My work focuses on explainability of graph data and graph generation, with applications in Biology.
+    </p>
+    <p>
+      Currently, I am Assistant Professor (RTD-A) at the Department of Computer Science of the University of Pisa.
+    </p>
+  </div>
+</section>
 
-    <h2>Hello! I'm John Doe.</h2>
-    <p>I am an academic researcher in Machine Learning with a strong focus on **Deep Learning for Computer Vision** and **Reinforcement Learning**. Currently, I am a Postdoctoral Researcher at the Department of Computer Science, University of Pisa, Italy.</p>
-
-    <p>My work involves developing novel algorithms for image recognition, object detection, and sequential decision-making in complex environments. I am particularly interested in the intersection of neural network architectures and efficient learning strategies for real-world applications.</p>
-
-    <p>Before joining the University of Pisa, I completed my PhD in Computer Science at XYZ University, where my research centered on interpretable machine learning models. I am always open to collaborations and discussing new ideas!</p>
-
-</div>
-
-<h3>Research Interests</h3>
-<ul>
-    <li>Deep Learning Architectures</li>
-    <li>Computer Vision (Object Detection, Segmentation)</li>
-    <li>Reinforcement Learning (Multi-agent Systems, Offline RL)</li>
-    <li>Explainable AI (XAI)</li>
-    <li>Natural Language Processing (NLP)</li>
-</ul>
-
-<h3>Contact Me</h3>
-<p>Feel free to reach out:</p>
-{% include social.html %}
+<section class="quick-links">
+  <div class="container">
+    <h2>Explore My Work and Profile</h2>
+    <ul>
+      <li>
+        <h3><a href="{{ '/publications/' | relative_url }}">My Publications</a></h3>
+        <p>Access my research papers.</p>
+      </li>
+      <li>
+        <h3><a href="{{ '/cv/' | relative_url }}">Curriculum Vitae</a></h3>
+        <p>Review my academic background and skills.</p>
+      </li>
+      <li>
+        <h3><a href="{{ '/teaching/' | relative_url }}">Teaching Experience</a></h3>
+        <p>Learn about the courses I've taught.</p>
+      </li>
+      <li>
+        <h3><a href="mailto:your.email@example.com">Contact Me</a></h3>
+        <p>Reach out for collaborations or inquiries.</p>
+      </li>
+    </ul>
+  </div>
+</section>

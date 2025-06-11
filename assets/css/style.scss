@@ -1,347 +1,255 @@
 ---
-# This ensures Jekyll processes this file as SCSS
+# This is Jekyll's front matter for SCSS files, required for processing
 ---
-@charset "utf-8";
 
-// Base variables (customize colors, fonts, etc.)
-$text-color: #333;
-$background-color: #fff;
-$brand-color: #007bff; // A nice blue
-$link-color: $brand-color;
-$link-hover-color: darken($link-color, 15%);
-$border-color: #e0e0e0;
-$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$font-family-heading: $font-family-base;
-$font-size-base: 1.1rem;
-$max-width: 960px;
-$spacing-unit: 30px;
-
-// Mixins (optional, but good practice for responsive design)
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-// General styling
-html {
-    font-size: 16px;
-}
+// Base Styles
 body {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
 }
 
-.wrapper {
-    max-width: $max-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $spacing-unit;
-    padding-right: $spacing-unit;
-    @include media-query($max-width + $spacing-unit * 2) {
-        max-width: 100%;
-    }
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-heading;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    line-height: 1.2;
+h1, h2, h3 {
+    color: #0056b3; // A deep blue for headings
 }
 
 a {
-    color: $link-color;
+    color: #007bff; // A standard blue for links
     text-decoration: none;
-    &:hover {
-        color: $link-hover-color;
-        text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+// Header Styles (Mobile-First Defaults for Navigation)
+header {
+    background: #333; // Dark background for the header
+    color: #fff; // White text color
+    padding: 1rem 0; // Padding top and bottom
+    text-align: center; // Center content by default for mobile
+}
+
+.header-content {
+    width: 90%;
+    max-width: 960px;
+    margin: auto;
+    /* No 'display: flex' here by default; items will stack vertically */
+}
+
+.main-nav {
+    padding-bottom: 10px; /* Space between nav and social on mobile */
+}
+
+.main-nav a { // Style for main navigation links
+    display: block; /* Make each link take full width, stacking them */
+    padding: 5px 0; /* Vertical padding for better touch targets */
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap; /* Prevent links from wrapping */
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.social-top-menu {
+    padding-top: 10px; /* Space between nav and social if nav is above */
+}
+
+.social-top-menu a { // Style for social links in the header
+    display: inline-block; /* Keep social icons inline, but allow wrapping */
+    margin: 0 10px; /* Spacing between social icons on mobile */
+    color: #fff;
+    font-size: 1.5em; /* Make icons slightly larger for mobile readability/touch */
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.social-top-menu a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+// Media Query for Larger Screens (e.g., Tablets and Desktops)
+@media (min-width: 768px) {
+    header {
+        text-align: left; /* Reset text alignment for larger screens */
+    }
+
+    .header-content {
+        display: flex; /* Enable flexbox for horizontal layout */
+        justify-content: space-between; /* Pushes nav left, social right */
+        align-items: center; /* Vertically aligns items */
+    }
+
+    .main-nav {
+        padding-bottom: 0; /* Remove mobile-specific padding */
+    }
+
+    .main-nav a {
+        display: inline-block; /* Revert to inline display */
+        padding: 0 15px; /* Horizontal padding for desktop */
+    }
+
+    .social-top-menu {
+        padding-top: 0; /* Remove mobile-specific padding */
+    }
+
+    .social-top-menu a {
+        margin-left: 15px; /* Restore larger spacing for desktop */
+        margin-right: 0; /* Ensure no unwanted right margin from mobile styling */
+        font-size: 1.2em; /* Revert to desktop icon size */
     }
 }
 
-p {
-    margin-bottom: 1em;
-}
 
-ul, ol {
-    margin-bottom: 1em;
-    padding-left: 1.5em;
-}
-
-// Header styling
-.site-header {
-    border-bottom: 1px solid $border-color;
-    min-height: 56px;
-    position: relative;
-    padding: $spacing-unit 0;
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-}
-
-.site-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    line-height: 1;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    display: block;
-    color: $text-color;
-    &:hover {
-        color: $text-color;
-        text-decoration: none;
-    }
-}
-
-// Navigation
-.site-nav {
-    line-height: 56px;
-    .nav-trigger {
-        display: none;
-    }
-    .menu-icon {
-        display: none;
-        cursor: pointer;
-        @include media-query($max-width / 1.5) { // Adjust breakpoint as needed
-            display: block;
-            float: right;
-            width: 36px;
-            height: 25px;
-            line-height: 0;
-            padding-top: 9px;
-            text-align: center;
-            svg {
-                fill: $text-color;
-            }
-        }
-    }
-    .trigger {
-        @include media-query($max-width / 1.5) {
-            clear: both;
-            display: none;
-        }
-    }
-    .page-link {
-        color: $text-color;
-        line-height: $spacing-unit;
-        margin-left: 20px;
-        &:not(:last-child) {
-            margin-right: 0px;
-        }
-        &:hover {
-            color: $link-hover-color;
-        }
-        @include media-query($max-width / 1.5) {
-            display: block;
-            padding: 5px 0;
-            margin-left: 0;
-        }
-    }
-    .nav-trigger:checked + label + .trigger {
-        @include media-query($max-width / 1.5) {
-            display: block;
-        }
-    }
-}
-
-// Main content area
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-// Footer
-.site-footer {
-    border-top: 1px solid $border-color;
-    padding: $spacing-unit 0;
+// Homepage Specific Styles
+.hero-section {
+    background: #e9ecef;
     text-align: center;
-    font-size: 0.9rem;
-    .footer-col-wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-bottom: $spacing-unit / 2;
-        @include media-query($max-width / 1.5) {
-            flex-direction: column;
-        }
-    }
-    .footer-col {
-        flex-basis: 33.333%;
-        padding: 0 10px;
-        margin-bottom: 1em;
-        @include media-query($max-width / 1.5) {
-            flex-basis: 100%;
-            text-align: center;
-            padding: 0;
-        }
-    }
-    .contact-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        li {
-            margin-bottom: 0.5em;
-        }
-    }
-    .social-links {
-        margin-top: 1em;
-        a {
-            display: inline-block;
-            margin: 0 10px 10px 0;
-            font-size: 1.1rem;
-            i {
-                margin-right: 5px;
-            }
-        }
-    }
+    padding: 40px 20px;
+    margin-bottom: 30px;
 }
 
-// Specific styles for pages (e.g., CV, Teaching)
-.post-header {
-    margin-bottom: $spacing-unit;
+.hero-section h1 {
+    margin-top: 0;
+    font-size: 2.8em;
+}
+
+.tagline {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #0056b3;
+}
+
+.quick-links {
+    padding: 20px 0;
+}
+
+.quick-links h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quick-links li {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
     text-align: center;
 }
 
-// Image styling
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto; // Center images by default
+.quick-links li h3 {
+    margin-top: 0;
 }
 
-.align-left { float: left; margin-right: 1em; }
-.align-right { float: right; margin-left: 1em; }
-.align-center { display: block; margin-left: auto; margin-right: auto; }
-
-// Button styling
-.btn {
-    display: inline-block;
-    padding: 0.8em 1.5em;
-    background-color: $brand-color;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    &:hover {
-        background-color: darken($brand-color, 10%);
-        text-decoration: none;
-    }
+.quick-links li h3 a {
+    color: #0056b3;
 }
 
-// Clearfix for floated content
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+// Footer Styles
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    background: #333;
+    color: #fff;
 }
 
-// Publications specific styles
+.footer-content {
+    width: 90%;
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+}
+
+// General Page Content Styling (applies to publications, CV, teaching, etc.)
+main {
+    padding: 20px 0;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+// Jekyll Scholar specific styles
 .publication {
-  margin-bottom: $spacing-unit * 1.5;
-  padding-bottom: $spacing-unit / 2;
-  border-bottom: 1px dashed $border-color;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-  &:last-child {
-    border-bottom: none;
-  }
-
-  .reference {
-    margin-bottom: 0.5em;
+.publication .reference {
+    font-size: 1.1em;
     line-height: 1.5;
-  }
-
-  .pub-links {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    .btn-link {
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: lighten($brand-color, 40%);
-        color: $brand-color;
-        border: 1px solid $brand-color;
-        border-radius: 3px;
-        font-size: 0.9em;
-        margin-right: 10px;
-        &:hover {
-            background-color: $brand-color;
-            color: white;
-            text-decoration: none;
-        }
-    }
-  }
-
-  .tags {
-    margin-top: 0.5em;
-    font-size: 0.85em;
-    color: #555;
-
-    .tag {
-      display: inline-block;
-      background-color: #f0f0f0;
-      color: #333;
-      padding: 4px 8px;
-      border-radius: 3px;
-      margin-right: 5px;
-      margin-bottom: 5px;
-      white-space: nowrap;
-      font-weight: 500;
-      border: 1px solid #ddd;
-    }
-  }
+    margin-bottom: 10px;
 }
 
-// CV specific styles
-.cv-entry {
-  margin-bottom: 1.5em;
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0.2em;
-    font-size: 1.3rem;
-  }
-  p {
-    margin-bottom: 0.5em;
-  }
-}
-
-.cv-skills {
-  p {
-    margin-bottom: 0.8em;
-  }
-}
-
-// Teaching specific styles
-.teaching-entry {
-  margin-bottom: 2em;
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0.2em;
-    font-size: 1.3rem;
-  }
-  p {
-    margin-bottom: 0.5em;
-  }
-  .btn-link { // Reuse button styling from publications if needed
+.pub-links a {
     display: inline-block;
+    background-color: #007bff;
+    color: white;
     padding: 5px 10px;
-    background-color: lighten($brand-color, 40%);
-    color: $brand-color;
-    border: 1px solid $brand-color;
     border-radius: 3px;
-    font-size: 0.9em;
-    margin-top: 5px;
-    &:hover {
-        background-color: $brand-color;
-        color: white;
-        text-decoration: none;
-    }
-  }
+    text-decoration: none;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.pub-links a:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.tags {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
