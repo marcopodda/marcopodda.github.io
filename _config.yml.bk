@@ -46,7 +46,42 @@ scholar:
 
   # For the bibliography template, you still define it in the {% bibliography %} tag,
   # or globally if you use a specific type. Let's keep `bibliography_template` for now.
-  bibliography_template: biblio # Your custom layout for each publication entry
+  # bibliography_template: biblio.html # Your custom layout for each publication entry
+  # --- THIS IS THE NEW, DEFINITIVE TEMPLATE DEFINITION ---
+  # --- THIS IS THE CORRECTED TEMPLATE DEFINITION ---
+  bibliography_template: |
+    <div class="publication">
+      <p class="reference">{{ reference }}</p>
+
+      <div class="pub-links">
+        {% if entry.url %}
+          <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer" class="btn-link">Paper</a>
+        {% endif %}
+        {% if entry.doi %}
+          <a href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener noreferrer" class="btn-link">DOI</a>
+        {% endif %}
+        {% if entry.pdf %}
+          <a href="{{ entry.pdf | relative_url }}" target="_blank" rel="noopener noreferrer" class="btn-link">PDF</a>
+        {% endif %}
+        {% if entry.code %}
+          <a href="{{ entry.code }}" target="_blank" rel="noopener noreferrer" class="btn-link">Code</a>
+        {% endif %}
+      </div>
+
+      {% if entry.note %}
+        {% assign notes = entry.note | split: ';' %}
+        <div class="tags">
+        {% for note in notes %}
+          {% assign tag_parts = note | split: ':' %}
+          {% if tag_parts.size > 1 %}
+            <span class="tag">{{ tag_parts[1] | strip | capitalize }}</span>
+          {% endif %}
+        {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  # --- END CORRECTED TEMPLATE DEFINITION ---
+  # --- END NEW TEMPLATE DEFINITION ---
 
 exclude:
   - .sass-cache/
