@@ -1,64 +1,49 @@
 ---
-layout: archive
-title: "CV"
+layout: page
+title: CV
 permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
 ---
 
-{% include base_path %}
+# Curriculum Vitae
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<p>{{ site.data.cv.short_bio | markdownify }}</p> {# markdownify filter allows Markdown in YAML #}
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+## Current Position
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+<p>
+  **{{ site.data.cv.current_position.title }}**<br>
+  {{ site.data.cv.current_position.institution }}<br>
+  {{ site.data.cv.current_position.start_date }} - {{ site.data.cv.current_position.end_date }}
+</p>
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Past Positions
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+{% for position in site.data.cv.past_positions %}
+
+<p>
+  **{{ position.title }}**<br>
+  {{ position.institution }}<br>
+  {{ position.start_date }} - {{ position.end_date }}
+</p>
+{% endfor %}
+
+<h2>Education</h2>
+{% for edu in site.data.cv.education %}
+<p>
+  **{{ edu.degree }}**, {{ edu.institution }} ({{ edu.year }})<br>
+  {{ edu.details }}
+</p>
+{% endfor %}
+
+<h2>Skills</h2>
+<p>
+  **Programming Languages:** {{ site.data.cv.skills.programming }}<br>
+  **Frameworks:** {{ site.data.cv.skills.frameworks }}<br>
+  **Tools:** {{ site.data.cv.skills.tools }}
+</p>
+
+<h2>Download Full CV</h2>
+<p>
+  For a detailed overview of my experience and qualifications, please download my full CV:<br>
+  <a href="{{ '/assets/John_Doe_CV.pdf' | relative_url }}" target="_blank" class="btn btn-primary">Download CV (PDF)</a>
+</p>

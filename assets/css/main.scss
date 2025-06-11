@@ -41,3 +41,35 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+.publication {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none; // No border for the last publication
+  }
+
+  p {
+    margin-bottom: 0.5em; // Reduce space between publication lines
+  }
+}
+
+.tags {
+  margin-top: 0.5em;
+  font-size: 0.85em;
+  color: #555;
+
+  .tag {
+    display: inline-block;
+    background-color: #e6e6e6; // Light gray background
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px; // For wrapping tags
+    white-space: nowrap; // Keep tags on one line
+    font-weight: 500;
+  }
+}

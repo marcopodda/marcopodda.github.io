@@ -295,6 +295,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-scholar
   - jemoji
 
 # Mimic GitHub Pages with --safe
@@ -340,3 +341,20 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+scholar:
+  style: apa # Or any other CSL style (e.g., ieee, chicago-fullnote-bibliography)
+  locale: en
+  # Path to your bibliography file (relative to site root)
+  source: _bibliography/references.bib
+  repository: _bibliography/references.bib # Often same as source
+  bibliography_template: biblio.html # We'll create this custom layout
+  # Grouping and ordering for publications page
+  group_by: year
+  order: descending
+  group_order: descending
+  # Optional: filters to include/exclude entries based on BibTeX fields
+  # For example, to only show entries with 'type: 'conference' from their 'note' field:
+  # query: '@*[note~"Type: Conference"]'
+  # Or to show all entries:
+  # query: '*'
