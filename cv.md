@@ -1,57 +1,62 @@
 ---
 layout: page
-title: CV
+title: Curriculum Vitae
 permalink: /cv/
 ---
 
-# Curriculum Vitae
-
-<p>{{ site.data.cv.short_bio | markdownify }}</p>
-
-<h2>Current Position</h2>
-<div class="cv-entry">
-    <h3>{{ site.data.cv.current_position.title }}</h3>
-    <p>{{ site.data.cv.current_position.institution }}<br>
-    <em>{{ site.data.cv.current_position.duration }}</em></p>
-</div>
-
-<h2>Past Positions</h2>
-{% for position in site.data.cv.past_positions %}
-<div class="cv-entry">
-    <h3>{{ position.title }}</h3>
-    <p>{{ position.institution }}<br>
-    <em>{{ position.duration }}</em></p>
-</div>
+{% comment %}
+  Loops through sections defined in _data/cv.yaml and renders each.
+{% endcomment %}
+{% for section in site.data.cv %}
+  <section class="cv-section">
+    <h2 class="cv-section-title">
+      {%- if section.icon -%}<i class="{{ section.icon }}"></i> {%- endif -%}
+      {{ section.title }}
+    </h2>
+    <div class="cv-section-content">
+      {% for item in section.items %}
+        <div class="cv-item">
+          {% if section.title == "Education" %}
+            <h3 class="cv-item-title">{{ item.degree }}</h3>
+            <p class="cv-item-meta">
+              {%- if item.years -%}<span class="cv-year-highlight">{{ item.years }}</span>{%- endif -%}
+              {%- if item.university -%}, {{ item.university }}{%- endif -%}
+            </p>
+            {% if item.details %}
+              <p class="cv-item-details">{{ item.details | markdownify }}</p>
+            {% endif %}
+          {% elsif section.title == "Academic Positions" %}
+            <h3 class="cv-item-title">{{ item.position }}</h3>
+            <p class="cv-item-meta">
+              {%- if item.years -%}<span class="cv-year-highlight">{{ item.years }}</span>{%- endif -%}
+              {%- if item.institution -%}&nbsp;{{ item.institution }}{%- endif -%}
+            </p>
+            {% if item.details %}
+              <p class="cv-item-details">{{ item.details | markdownify }}</p>
+            {% endif %}
+          {% elsif section.title == "Awards & Honors" %}
+            <h3 class="cv-item-title">{{ item.name }}</h3>
+            <p class="cv-item-meta">
+              {%- if item.year -%}<span class="cv-year-highlight">{{ item.year }}</span>{%- endif -%}
+              {%- if item.awarder -%}, {{ item.awarder }}{%- endif -%}
+            </p>
+            {% if item.details %}
+              <p class="cv-item-details">{{ item.details | markdownify }}</p>
+            {% endif %}
+          {% elsif section.title == "Skills" %}
+            <h3 class="cv-item-title">{{ item.category }}</h3>
+            <p class="cv-item-list">{{ item.list }}</p>
+          {% elsif section.title == "Languages" %}
+            {% if item.details %}
+              <p class="cv-item-details">{{ item.details | markdownify }}</p>
+            {% endif %}
+            {% if item.language %}
+              <p class="cv-item-title">{{ item.language }}</p>
+              <p class="cv-item-meta">{{ item.level }}</p>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
 {% endfor %}
-
-<h2>Education</h2>
-{% for edu in site.data.cv.education %}
-<div class="cv-entry">
-    <h3>{{ edu.degree }}</h3>
-    <p>{{ edu.institution }} ({{ edu.year }})<br>
-    <em>{{ edu.details }}</em></p>
-</div>
-{% endfor %}
-
-<h2>Skills</h2>
-<div class="cv-skills">
-{% for skill_set in site.data.cv.skills %}
-    <p><strong>{{ skill_set.category }}:</strong> {{ skill_set.list }}</p>
-{% endfor %}
-</div>
-
-{% if site.data.cv.awards_honors %}
-
-<h2>Awards & Honors</h2>
-<ul>
-{% for award in site.data.cv.awards_honors %}
-    <li>{{ award }}</li>
-{% endfor %}
-</ul>
-{% endif %}
-
-<h2 style="margin-top: 3em;">Download Full CV</h2>
-<p>
-  For a detailed overview of my experience and qualifications, please download my complete Curriculum Vitae in PDF format: <br>
-  <a href="{{ '/assets/John_Doe_CV.pdf' | relative_url }}" target="_blank" class="btn">Download CV (PDF)</a>
-</p>

@@ -1,0 +1,14 @@
+/* _footer.scss */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+    border-top: 5px solid var(--accent-color); /* Match header highlight */
+
+    p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+}

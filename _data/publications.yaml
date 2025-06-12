@@ -1,0 +1,436 @@
+- id: micheli2022deep
+  type: Book Chapter
+  title: Deep Learning in Cheminformatics
+  booktitle: Deep Learning in Biology and Medicine
+  publisher: World Scientific Publishing
+  pages: 157–195
+  url: https://www.worldscientific.com/doi/10.1142/9781800610941_0006
+  DOI: 10.1142/9781800610941_0006
+  year: 2022
+  authors: A. Micheli, M. Podda
+  tags:
+  - published
+  - Book Chapter
+- id: scirep2018
+  type: Journal
+  title: 'A machine learning approach to estimating preterm infants survival: development
+    of the Preterm Infants Survival Assessment (PISA) predictor'
+  journal: Scientific Reports
+  publisher: Springer Science and Business Media LLC
+  volume: '8'
+  number: '1'
+  url: https://www.nature.com/articles/s41598-018-31920-6
+  DOI: 10.1038/s41598-018-31920-6
+  issn: 2045-2322
+  code: https://github.com/marcopodda/inn
+  year: 2018
+  authors: M. Podda, D. Bacciu, A. Micheli, R. Bellù, G. Placidi, L. Gagliardi
+  tags:
+  - published
+  - journal
+- id: neunet2020
+  type: Journal
+  title: A gentle introduction to deep learning for graphs
+  journal: Neural Networks
+  volume: '129'
+  pages: 203–221
+  url: https://www.sciencedirect.com/science/article/abs/pii/S0893608020302197
+  DOI: 10.1016/j.neunet.2020.06.006
+  issn: 0893-6080
+  year: 2020
+  authors: D. Bacciu, F. Errica, A. Micheli, M. Podda
+  tags:
+  - published
+  - journal
+- id: neucom2020
+  type: Journal
+  title: Edge-based sequential graph generation with recurrent neural networks
+  journal: Neurocomputing
+  publisher: Elsevier BV
+  volume: '416'
+  pages: 177–189
+  url: https://www.sciencedirect.com/science/article/abs/pii/S0925231220305075
+  DOI: 10.1016/j.neucom.2019.11.112
+  issn: 0925-2312
+  code: https://github.com/marcopodda/grapher
+  year: 2020
+  authors: D. Bacciu, A. Micheli, M. Podda
+  tags:
+  - published
+  - journal
+- id: bio2021
+  type: Journal
+  title: In silico modeling of biochemical pathways
+  journal: Biomedical Science and Engineering
+  publisher: PAGEPress Publications
+  volume: '4'
+  number: s1
+  url: https://www.pagepress.org/technology/bse/article/view/142
+  DOI: 10.4081/bse.2021.142
+  issn: 2531-9892
+  year: 2021
+  authors: P. Milazzo, R. Gori, A. Micheli, L. Nasti, M. Podda
+  tags:
+  - published
+  - journal
+- id: bioinformatics2023
+  type: Journal
+  title: Exploiting the structure of biochemical pathways to investigate dynamical
+    properties with neural networks for graphs
+  journal: Bioinformatics
+  volume: '39'
+  number: '11'
+  url: https://academic.oup.com/bioinformatics/article/39/11/btad678/7407341
+  DOI: 10.1093/bioinformatics/btad678
+  issn: 1367-4811
+  code: https://github.com/marcopodda/petri-bio
+  year: 2023
+  authors: M. Fontanesi, A. Micheli, P. Milazzo, M. Podda
+  tags:
+  - published
+  - journal
+- id: tetc2023
+  type: Journal
+  title: Deep Graph Networks for Drug Repurposing with Multi-Protein Targets
+  journal: IEEE Transactions on Emerging Topics in Computing
+  publisher: IEEE
+  pages: 1–14
+  url: https://ieeexplore.ieee.org/document/10026802
+  DOI: 10.1109/TETC.2023.3238963
+  code: "https://github.com/gravins/covid19-drug-repurposing\uFFFEwith-DGNs"
+  year: 2023
+  authors: D. Bacciu, F. Errica, A. Gravina, L. Madeddu, M. Podda, G. Stilo
+  tags:
+  - published
+  - journal
+- id: iscience2024
+  type: Journal
+  title: Classification of Neisseria meningitidis genomes with a bag-of-words approach
+    and machine learning
+  journal: iScience
+  publisher: Elsevier BV
+  volume: '27'
+  number: '3'
+  url: https://www.sciencedirect.com/science/article/pii/S2589004224004784
+  DOI: 10.1016/j.isci.2024.109257
+  issn: 2589-0042
+  code: https://github.com/mbodini/genome-predictor
+  year: 2024
+  authors: M. Podda, S. Bonechi, A. Palladino, M. Scaramuzzino, A. Brozzi, G. Roma,
+    A. Muzzi, C. Priami, A. Sîrbu, M. Bodini
+  tags:
+  - published
+  - journal
+- id: plos2025
+  type: Journal
+  title: A descriptor-free machine learning framework to improve antigen discovery
+    for bacterial pathogens
+  journal: PLOS ONE
+  publisher: Public Library of Science
+  volume: '20'
+  number: '6'
+  pages: 1-22
+  url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323895
+  DOI: 10.1371/journal.pone.0323895
+  code: https://github.com/marcopodda/dfpac
+  year: 2025
+  authors: M. Podda, C. Savojardo, P. Luigi Martelli, R. Casadio, A. Sîrbu, C. Priami,
+    A. Brozzi
+  tags:
+  - published
+  - journal
+- id: bmc2025
+  type: Journal
+  title: Sensitivity analysis on Protein-Protein Interaction Networks through Deep
+    Graph Networks
+  journal: BMC Bioinformatics
+  publisher: Springer Nature
+  volume: '26'
+  number: '124'
+  url: https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-025-06140-1
+  DOI: 10.1186/s12859-025-06140-1
+  code: https://github.com/alessandrodipalma/sensitivity_ppin_dgn
+  year: 2025
+  authors: A. Dipalma, M. Fontanesi, A. Micheli, P. Milazzo, M. Podda
+  tags:
+  - published
+  - journal
+- id: miglior2025esann
+  type: Conference
+  title: Towards Efficient Molecular Property Optimization with Graph Energy Based
+    Models
+  booktitle: Proceedings of the 32nd European Symposium on Artificial Neural Networks,
+    Computational Intelligence and Machine Learning (ESANN)
+  publisher: i6doc.com
+  pages: 289–294
+  url: https://www.esann.org/sites/default/files/proceedings/2025/ES2025-120.pdf
+  DOI: https://doi.org/10.14428/esann/2025.ES2025-120
+  year: 2025
+  authors: L. Miglior, L. Simone, M. Podda, D. Bacciu
+  tags:
+  - published
+  - conference
+- id: fontanesi2025ds
+  type: Conference
+  title: Analyzing Explanations of Deep Graph Networks through Node Centrality and
+    Connectivity
+  booktitle: Discovery Science
+  publisher: Springer Nature Switzerland
+  pages: 295–309
+  url: https://link.springer.com/chapter/10.1007/978-3-031-78977-9_19
+  DOI: 10.1007/978-3-031-78977-9_19
+  year: 2025
+  authors: M. Fontanesi, A. Micheli, M. Podda, D. Tortorella
+  tags:
+  - published
+  - conference
+- id: fontanesi2025aixia
+  type: Conference
+  title: Relating Explanations with the Inductive Biases of Deep Graph Networks
+  booktitle: AIxIA 2024 – Advances in Artificial Intelligence
+  publisher: Springer Nature Switzerland
+  pages: 175–187
+  url: https://link.springer.com/chapter/10.1007/978-3-031-80607-0_14
+  DOI: 10.1007/978-3-031-80607-0_14
+  year: 2025
+  authors: M. Fontanesi, A. Micheli, M. Podda
+  tags:
+  - published
+  - conference
+- id: fontanesi2024esann
+  type: Conference
+  title: XAI and Bias of Deep Graph Networks
+  booktitle: Proceedings of the 32nd European Symposium on Artificial Neural Networks,
+    Computational Intelligence and Machine Learning (ESANN)
+  publisher: i6doc.com
+  pages: 41–46
+  url: https://www.esann.org/sites/default/files/proceedings/2024/ES2024-85.pdf
+  DOI: https://doi.org/10.14428/esann/2024.ES2024-85
+  year: 2024
+  authors: M. Fontanesi, A. Micheli, M. Podda
+  tags:
+  - published
+  - conference
+- id: tolloso2024cmsb
+  type: Conference
+  title: How Much Do DNA and Protein Deep Embeddings Preserve Biological Information?
+  booktitle: Computational Methods in Systems Biology
+  publisher: Springer Nature Switzerland
+  pages: 209–225
+  url: https://link.springer.com/chapter/10.1007/978-3-031-71671-3_15
+  DOI: 10.1007/978-3-031-71671-3_15
+  year: 2024
+  authors: M. Tolloso, S. G. Galfrè, A. Pavone, M. Podda, A. Sîrbu, C. Priami
+  tags:
+  - published
+  - conference
+- id: esann2023
+  type: Conference
+  title: Graph Representation Learning
+  booktitle: Proceedings of the 31st European Symposium on Artificial Neural Networks,
+    Computational Intelligence and Machine Learning (ESANN)
+  publisher: i6doc.com
+  pages: 1–10
+  url: https://www.esann.org/sites/default/files/proceedings/2023/ES2023-4.pdf
+  DOI: 10.14428/esann/2023.ES2023-4
+  year: 2023
+  authors: D. Bacciu, F. Errica, A. Micheli, N. Navarin, L. Pasa, M. Podda, D. Zambon
+  tags:
+  - published
+  - conference
+- id: ninniri2024freegress
+  type: Conference
+  title: Classifier-Free Graph Diffusion for Molecular Property Targeting
+  booktitle: Machine Learning and Knowledge Discovery in Databases. Research Track.
+    ECML PKDD
+  publisher: Springer Nature Switzerland
+  pages: 318–335
+  url: https://link.springer.com/chapter/10.1007/978-3-031-70359-1_19
+  DOI: 10.1007/978-3-031-70359-1_19
+  code: https://github.com/Asduffo/FreeGress
+  year: 2024
+  authors: M. Ninniri, M. Podda, D. Bacciu
+  tags:
+  - published
+  - conference
+- id: fontanesi2024xai
+  type: Conference
+  title: Explaining Graph Classifiers by Unsupervised Node Relevance Attribution
+  booktitle: Explainable Artificial Intelligence
+  publisher: Springer Nature Switzerland
+  pages: 63–74
+  url: https://link.springer.com/chapter/10.1007/978-3-031-63797-1_4
+  DOI: 10.1007/978-3-031-63797-1_4
+  code: https://github.com/Fonta1/unsupervised-node-relevance-attribution
+  year: 2024
+  authors: M. Fontanesi, A. Micheli, M. Podda
+  tags:
+  - published
+  - conference
+- id: podda2021classification
+  type: Conference
+  title: Classification of Biochemical Pathway Robustness with Neural Networks for
+    Graphs
+  booktitle: Communications in Computer and Information Science
+  publisher: Springer International Publishing
+  pages: 215–239
+  url: https://link.springer.com/chapter/10.1007/978-3-030-72379-8_11
+  DOI: 10.1007/978-3-030-72379-8_11
+  issn: 1865-0937
+  year: 2021
+  authors: M. Podda, P. Bove, A. Micheli, P. Milazzo
+  tags:
+  - published
+  - conference
+- id: esann2019
+  type: Conference
+  title: Graph generation by sequential edge prediction
+  booktitle: Proceedings of the 27th European Symposium on Artificial Neural Networks,
+    Computational Intelligence and Machine Learning (ESANN)
+  publisher: i6doc.com
+  pages: 95–100
+  url: https://www.esann.org/sites/default/files/proceedings/legacy/es2019-107.pdf
+  year: 2019
+  authors: D. Bacciu, A. Micheli, M. Podda
+  tags:
+  - published
+  - conference
+- id: esann2020
+  type: Conference
+  title: Biochemical Pathway Robustness Prediction with Graph Neural Networks
+  booktitle: Proceedings of the 28th European Symposium on Artificial Neural Networks,
+    Computational Intelligence and Machine Learning (ESANN)
+  publisher: i6doc.com
+  pages: 121–126
+  url: https://www.esann.org/sites/default/files/proceedings/2020/ES2020-41.pdf
+  year: 2020
+  authors: M. Podda, D. Bacciu, A. Micheli, P. Milazzo
+  tags:
+  - published
+  - conference
+- id: biostec2020
+  type: Conference
+  title: Prediction of Dynamical Properties of Biochemical Pathways with Graph Neural
+    Networks
+  booktitle: 'Proceedings of the 13th International Joint Conference on Biomedical
+    Engineering Systems and Technologies - Volume 3: BIOINFORMATICS'
+  publisher: SCITEPRESS
+  pages: 32–43
+  url: https://www.scitepress.org/Papers/2020/89647/89647.pdf
+  DOI: 10.5220/0008964700320043
+  year: 2020
+  authors: P. Bove, A. Micheli, P. Milazzo, M. Podda
+  tags:
+  - published
+  - conference
+- id: aistats2020
+  type: Conference
+  title: A Deep Generative Model for Fragment-Based Molecule Generation
+  booktitle: Proceedings of the 23rd International Conference on Artificial Intelligence
+    and Statistics (AISTATS)
+  url: https://proceedings.mlr.press/v108/podda20a.html
+  code: https://github.com/marcopodda/fragment-based-dgm
+  year: 2020
+  authors: M. Podda, D. Bacciu, A. Micheli
+  tags:
+  - published
+  - conference
+- id: iclr2020
+  type: Conference
+  title: A Fair Comparison of Graph Neural Networks for Graph Classification
+  booktitle: 8th International Conference on Learning Representations (ICLR)
+  url: https://openreview.net/pdf?id=HygDF6NFPB
+  code: https://github.com/diningphil/gnn-comparison
+  year: 2020
+  authors: F. Errica, M. Podda, D. Bacciu, A. Micheli
+  tags:
+  - published
+  - conference
+- id: ijcnn2021
+  type: Conference
+  title: 'GraphGen-Redux: A Fast and Lightweight Recurrent Model for labeled Graph
+    Generation'
+  booktitle: International Joint Conference on Neural Networks (IJCNN)
+  publisher: IEEE
+  pages: 1–8
+  url: https://ieeexplore.ieee.org/document/9533743
+  DOI: 10.1109/IJCNN52387.2021.9533743
+  code: https://github.com/marcopodda/graphgen-redux
+  year: 2021
+  authors: M. Podda, D. Bacciu
+  tags:
+  - published
+  - conference
+- id: gclr2023
+  type: Conference
+  title: Classifier-free graph diffusion for molecular property targeting
+  booktitle: 4th workshop on Graphs and more Complex structures for Learning and Reasoning
+    - Colocated with AAAI 2024
+  url: https://drive.google.com/file/d/17xTQeQpxOC12rTKQNxNpdAW4Zk7ZcUC0/view
+  year: 2024
+  authors: M. Ninniri, M. Podda, D. Bacciu
+  tags:
+  - published
+  - conference
+- id: gbr2025
+  type: Conference
+  title: An Empirical Investigation of Shortcuts in Graph Learning
+  booktitle: Graph-Based Representations in Pattern Recognition
+  publisher: Springer Nature Switzerland
+  pages: 147–156
+  url: https://link.springer.com/chapter/10.1007/978-3-031-94139-9_14
+  DOI: 10.1007/978-3-031-94139-9_14
+  year: 2025
+  authors: D. Tortorella, M. Fontanesi, A. Micheli, M. Podda
+  tags:
+  - published
+  - conference
+- id: magistrale2017
+  type: Thesis
+  title: 'Predicting mortality in low birth weight infants: a machine learning perspective'
+  year: 2017
+  authors: M. Podda, A. Micheli, D. Bacciu
+  tags:
+  - MSc Thesis
+- id: phd2021
+  type: Thesis
+  title: Deep Learning on Graphs with Applications to the Life Sciences
+  year: 2021
+  authors: M. Podda
+  tags:
+  - PhD Thesis
+- id: delucia2024predictive
+  type: Abstract
+  title: Predictive machine learning model for mechanical dilatation in transvenous
+    lead extraction procedures
+  journal: European Heart Journal Supplements
+  publisher: Oxford University Press UK
+  volume: '26'
+  number: Supplement_2
+  pages: ii82–ii82
+  year: 2024
+  authors: R. De Lucia, A. Micheli, A. Parlato, M. Podda, L. Pedrelli, M. Parollo,
+    L. Segreti, A. Di Cori, others
+  tags:
+  - abstract
+- id: bove2019preliminary
+  type: Abstract
+  title: Preliminary Results on Predicting Robustness of Biochemical Pathways through
+    Machine Learning on Graphs
+  booktitle: Pre-proceedings of the 8th International Symposium “From Data to Models
+    and Back (DataMod)”
+  year: 2019
+  authors: P. Bove, A. Micheli, P. Milazzo, M. Podda
+  tags:
+  - abstract
+- id: aixia2021
+  type: Abstract
+  title: A rigorous evaluation of embeddings-based vs. feature-based machine learning
+    models for protein antigenicity prediction
+  booktitle: The 10th Italian Workshop on Machine Learning and Data Mining” (MLDM)
+    – Part of the 20th International Conference of the Italian Association for Artificial
+    Intelligence (AIxIA)
+  year: 2021
+  authors: M. Podda, A. Sîrbu, C. Priami, A. Brozzi
+  tags:
+  - abstract

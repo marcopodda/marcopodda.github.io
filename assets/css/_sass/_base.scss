@@ -1,0 +1,120 @@
+/* _base.scss */
+
+// Basic Reset & Global Variables
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Define colors as SASS variables
+$primary-color: #333;
+$secondary-color: #555;
+$accent-color: #007bff; // This is your main blue
+$light-bg: #f8f8f8;
+$white: #fff;
+$border-color: #eee;
+
+// NEW TAG COLORS
+$status-tag-bg: #82E0AA; // A soft green for 'status'
+$status-tag-text: #1F613C;
+$article-type-tag-bg: #A9CCE3; // A soft blue for 'article type'
+$article-type-tag-text: #2874A6;
+
+// Define other variables (typography, spacing) as SASS variables
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif;
+$font-size-base: 1rem; // 16px
+$line-height-base: 1.6;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+
+// Output SASS variables as CSS custom properties (variables) for runtime use
+:root {
+    // Color Palette
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --accent-color: #{$accent-color};
+    --light-bg: #{$light-bg};
+    --white: #{$white};
+    --border-color: #{$border-color};
+
+    // tag colors
+    --status-tag-bg: #{$status-tag-bg};
+    --status-tag-text: #{$status-tag-text};
+    --article-type-tag-bg: #{$article-type-tag-bg};
+    --article-type-tag-text: #{$article-type-tag-text};
+
+    // Typography
+    --font-family-sans-serif: #{$font-family-sans-serif};
+    --font-family-serif: #{$font-family-serif};
+    --font-size-base: #{$font-size-base};
+    --line-height-base: #{$line-height-base};
+
+    // Spacing
+    --spacing-xs: #{$spacing-xs};
+    --spacing-sm: #{$spacing-sm};
+    --spacing-md: #{$spacing-md};
+    --spacing-lg: #{$spacing-lg};
+    --spacing-xl: #{$spacing-xl};
+}
+
+html {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--primary-color);
+    font-family: var(--font-family-sans-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        // Now, use the SASS variable directly for the darken function
+        color: darken($accent-color, 10%);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-sans-serif);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1 { font-size: 2.5rem; margin-top: var(--spacing-xl); }
+h2 { font-size: 2rem; margin-top: var(--spacing-lg); }
+h3 { font-size: 1.5rem; margin-top: var(--spacing-md); }
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+ul, ol {
+    margin-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+}
+
+// Global container for fixed width content
+.container {
+    max-width: 1200px; // Larger max-width for overall page containers
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}

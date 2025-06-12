@@ -1,0 +1,108 @@
+/* _publications.scss */
+
+/* Publications Page Styling */
+
+.bibliography-year {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+
+    h2 {
+        font-size: 2em;
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+.publication-item {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .publication-authors {
+        font-size: 1em;
+        color: var(--secondary-color);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .publication-title {
+        font-size: 1.4em;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-top: 0;
+        margin-bottom: var(--spacing-sm);
+        line-height: 1.3;
+    }
+
+    .publication-venue {
+        font-size: 0.95em;
+        color: var(--secondary-color);
+        margin-bottom: var(--spacing-md);
+        font-style: italic;
+    }
+
+    // Default styling for all tags
+    .publication-type-tag,
+    .publication-tags .tag {
+        display: inline-block;
+        padding: 0.3em 0.8em;
+        border-radius: 15px;
+        font-size: 0.85em;
+        margin-right: var(--spacing-xs);
+        margin-bottom: var(--spacing-xs);
+        text-transform: capitalize;
+        font-weight: normal;
+        white-space: nowrap; /* Prevents tags from breaking into multiple lines */
+    }
+
+    // Default general tag style (for 'tags' array)
+    .publication-tags .tag {
+        background-color: #e0e0e0;
+        color: #555;
+    }
+
+    // Specific styling for 'Status' tags
+    .publication-type-tag.tag-status {
+        background-color: var(--status-tag-bg);
+        color: var(--status-tag-text);
+        font-weight: bold;
+    }
+
+    // Specific styling for 'Article Type' tags
+    .publication-type-tag.tag-article-type {
+        background-color: var(--article-type-tag-bg);
+        color: var(--article-type-tag-text);
+        font-weight: bold;
+    }
+
+    .pub-links {
+        margin-top: var(--spacing-md);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+
+        .btn-link {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: darken($accent-color, 10%);
+            }
+        }
+    }
+}

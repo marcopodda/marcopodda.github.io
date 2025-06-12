@@ -1,34 +1,71 @@
-short_bio: "I am an academic researcher in Machine Learning with expertise in **Deep Learning for Computer Vision** and **Reinforcement Learning**. My work focuses on developing robust and efficient learning systems for complex real-world challenges, particularly in areas like autonomous agents and image understanding. I hold a PhD in Computer Science from XYZ University."
-current_position:
-  title: "Postdoctoral Researcher"
-  institution: "Department of Computer Science, University of Pisa, Italy"
-  duration: "Sept 2024 – Present"
-past_positions:
-  - title: "PhD Candidate"
-    institution: "XYZ University, Country"
-    duration: "Oct 2019 – Aug 2024"
-  - title: "Research Assistant"
-    institution: "ABC Lab, City, Country"
-    duration: "June 2018 – Sept 2019"
-education:
-  - degree: "PhD in Computer Science"
-    institution: "XYZ University"
-    year: "2024"
-    details: "Thesis: 'Novel Approaches to Generalizable Reinforcement Learning'"
-  - degree: "M.Sc. in Machine Learning"
-    institution: "University of Pisa"
-    year: "2019"
-    details: "Focus: Deep Neural Networks and Probabilistic Models"
-  - degree: "B.Sc. in Computer Science"
-    institution: "University of Florence"
-    year: "2017"
-skills:
-  - category: "Programming Languages"
-    list: "Python, R, Julia, C++"
-  - category: "Machine Learning Frameworks"
-    list: "PyTorch, TensorFlow, Scikit-learn, Hugging Face Transformers"
-  - category: "Tools & Technologies"
-    list: "Git, Docker, LaTeX, Google Cloud Platform, AWS"
-awards_honors:
-  - "Best Paper Award, ICLR 2023 (for 'Offline Reinforcement Learning...')"
-  - "University PhD Fellowship (2019-2023)"
+- title: Academic Positions
+  icon: fa-solid fa-briefcase # Changed from fa-briefcase
+  items:
+    - position: Assistant Professor (RTD-A)
+      institution: University of Pisa, Department of Computer Science
+      years: 2023 - Present
+      details: |
+        - Co-Teacher of "Artificial Intelligence for Digital Health" (M.Sc. course).
+        - Member of the "Future of Artificial Intelligence Research (FAIR)" EU project.
+        - Supervising 1 Ph.D. student and 5+ M.Sc. theses.
+    - position: Postdoctoral Researcher
+      institution: University of Pisa, Department of Computer Science - GSK Vaccines srl
+      years: 2021 - 2023
+      details: "Conducted research on machine learning for vaccine development."
+    - position: Research Fellow
+      institution: University of Pisa, Department of Computer Science
+      years: May-November 2017
+      details: "Conducted research on analysis of clonal evolution data by machine learning."
+
+- title: Education
+  icon: fa-solid fa-graduation-cap # Changed from fa-graduation-cap
+  items:
+    - degree: Ph.D. in Computer Science
+      university: University of Pisa, Italy
+      years: 2017 - 2021
+      details: |
+        Thesis: "Deep Learning on Graphs with Applications to the Life Sciences"<br>
+        Advisors: Prof. Alessio Micheli - Prof. Davide Bacciu
+    - degree: M.Sc. in Computer Science
+      university: University of Pisa, Italy
+      years: 2008 - 2017
+      details: |
+        Thesis: "Predicting mortality in low birth weight infants: a machine learning perspective"<br>
+        Advisors: Prof. Alessio Micheli - Prof. Davide Bacciu
+    - degree: B.Sc. in Computer Science
+      university: University of Cagliari, Italy
+      years: 2004 - 2008
+
+- title: Awards & Honors
+  icon: fa-solid fa-award # Changed from fa-award
+  items:
+    - name: Best Paper Award
+      awarder: International Joint Conference on Biomedical Engineering Systems and Technologies (BIOSTEC)
+      year: 2021
+      details: "Awarded for the paper 'Prediction of Dynamical Properties of Biochemical Pathways with Graph Neural Networks'."
+    - name: University Scholarship for Doctoral Studies
+      awarder: University of Pisa - MIUR
+      year: 2017 - 2021
+      details: "Full tuition and living stipend for Ph.D. research."
+
+- title: Skills
+  icon: fa-solid fa-laptop-code # Changed from fa-laptop-code
+  items:
+    - category: Programming Languages
+      list: Python, C, R
+    - category: Machine Learning Frameworks
+      list: PyTorch, TensorFlow, Keras, Scikit-learn, Hugging Face Transformers
+    - category: Data Science Tools
+      list: Pandas, NumPy, SciPy, Matplotlib, Seaborn, Jupyter
+    - category: Graph & Network Tools
+      list: NetworkX, PyTorch Geometric, DGL
+    - category: Other
+      list: LaTeX, Markdown, SQL, UNIX/Linux
+
+- title: Languages
+  icon: fa-solid fa-globe # Changed from fa-globe
+  items:
+    - language: Italian
+      level: Native
+    - language: English
+      level: Fluent

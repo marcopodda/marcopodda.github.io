@@ -1,55 +1,22 @@
-# Site settings
-title: "Marco Podda - Academic Researcher"
-email: "marco.podda@unipi.it"
-description: "Personal website of Marco Podda."
-baseurl: "" # The subpath of your site, e.g. /blog
-url: "https://marcopodda.github.io" # The base hostname & protocol for your site
-timezone: Europe/Rome # Set your timezone for correct date/time
-lang: en # Site language
-
-# Author/Contact Information
+# _config.yml
+title: Marco Podda - Researcher # Replace with your actual name
 author:
-  name: "Marco Podda"
-  email: "marco.podda@unipi.it"
-  github: "marcopodda"
+  name: Marco Podda
+  email: marco.podda@unipi.it
+description: >- # This will populate your site's <meta name="description"> tag.
+  A brief description of your research and expertise.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: pretty
 
-social:
-  github: marcopodda
-  google_scholar: pDMrAqgAAAAJ
-  linkedin: marcopodda
+# Sass configuration (Crucial for your _sass structure)
+sass:
+  sass_dir: assets/css/_sass # This points to your _sass directory
+  style: compressed # Compresses CSS for production
 
-# Build settings
-markdown: kramdown
-theme: minima # The default Jekyll theme, you can remove this later if fully custom
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-scholar # Crucial for publications
-
-scholar:
-  style: apa # or ieee, chicago-fullnote-bibliography, etc.
-  locale: en
-
-  sort_by: year # No specific sorting in this example, but can be 'year', 'author', etc.
-  order: ascending # Or 'descending'
-
-  # --- CRITICAL CHANGE HERE ---
-  source: _bibliography # Path to the DIRECTORY containing your .bib file, relative to site root
-  bibliography: references.bib # The FILENAME of your .bib file within the source directory
-  # --- END CRITICAL CHANGE ---
-
-  # Details page configuration (optional, if you want separate pages for each pub)
-  details_dir: bibliography # Directory for generated details pages (e.g., /bibliography/entry_id.html)
-  details_layout: bibtex.html # Layout to use for the details page
-  details_link: Details # Link text for details page
-
-  query: "@*" # Query for all entries. Also ensure there's no space: "@*" not "@ *"
-
-  # For the bibliography template, you still define it in the {% bibliography %} tag,
-  # or globally if you use a specific type. Let's keep `bibliography_template` for now.
-  bibliography_template: biblio # Your custom layout for each publication entry
-
+# Exclude from processing.
+# The following items will not be processed, by default.
+# For a full list of exclusions, see: https://jekyllrb.com/docs/configuration/#exclusion-from-processing
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -61,4 +28,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-#   - CNAME # If you add a custom domain later

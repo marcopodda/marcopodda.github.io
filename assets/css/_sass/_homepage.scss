@@ -1,0 +1,92 @@
+/* _homepage.scss */
+
+.hero-section {
+    background-color: var(--light-bg);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+
+    .hero-content-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: var(--spacing-sm);
+        line-height: 1.1;
+        font-family: 'Roboto Mono', monospace; /* Add this line */
+
+        @media (max-width: 768px) {
+            font-size: 2.2rem;
+        }
+    }
+
+    .tagline {
+        font-size: 1.25rem;
+        color: var(--secondary-color);
+        max-width: 700px;
+        margin: 0 auto var(--spacing-md) auto;
+        line-height: 1.5;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+    }
+}
+
+.quick-links {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--white);
+    text-align: center;
+
+    h2 {
+        margin-bottom: var(--spacing-lg);
+        color: var(--primary-color);
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    li {
+        background-color: var(--light-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: var(--spacing-md);
+        text-align: left;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        h3 a {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            margin-bottom: 0;
+        }
+    }
+}

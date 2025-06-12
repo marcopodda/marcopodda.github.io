@@ -103,11 +103,6 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
-    jekyll-scholar (7.2.0)
-      bibtex-ruby (~> 6.0)
-      citeproc-ruby (~> 2.0)
-      csl-styles (~> 2.0)
-      jekyll (~> 4.0)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
@@ -218,7 +213,6 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.4.1)
   jekyll-feed (~> 0.12)
-  jekyll-scholar
   jekyll-seo-tag
   jekyll-sitemap
   minima (~> 2.5)

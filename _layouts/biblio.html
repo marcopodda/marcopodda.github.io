@@ -1,8 +1,44 @@
 ---
 # This empty front matter is essential for Jekyll to recognize it as a layout
 ---
-<div class="publication">
-  <p class="reference">{{ reference }}</p>
+<div class="publication-item">
+  <p class="publication-authors">
+    {%- if entry.author -%}
+      {{- entry.author -}}
+    {%- else if entry.editor -%}
+      {{- entry.editor -}} (Ed.)
+    {%- endif -%}
+  </p>
+  <h3 class="publication-title">{{ entry.title }}</h3>
+  <p class="publication-venue">
+    {%- if entry.journal -%}
+      {{- entry.journal -}}
+      {%- if entry.volume -%}, Vol. {{- entry.volume -}}{%- endif -%}
+      {%- if entry.number -%}({{- entry.number -}}){%- endif -%}
+    {%- elsif entry.booktitle -%}
+      In: {{- entry.booktitle -}}
+    {%- elsif entry.publisher -%}
+      {{- entry.publisher -}}
+    {%- else -%}
+      Unpublished/Venue N/A
+    {%- endif -%}
+  </p>
+
+  <div class="publication-type-tag tag tag-type-{{ entry.type | downcase }}">
+    {{ entry.type | capitalize }}
+  </div>
+
+  {% if entry.note %}
+    {% assign notes = entry.note | split: ';' %}
+    <div class="publication-tags">
+    {% for note in notes %}
+      {% assign tag_parts = note | split: ':' %}
+      {% if tag_parts.size > 1 %}
+        <span class="tag">{{ tag_parts[1] | strip | capitalize }}</span>
+      {% endif %}
+    {% endfor %}
+    </div>
+  {% endif %}
 
   <div class="pub-links">
     {% if entry.url %}
@@ -18,16 +54,4 @@
       <a href="{{ entry.code }}" target="_blank" rel="noopener noreferrer" class="btn-link">Code</a>
     {% endif %}
   </div>
-
-  {% if entry.note %}
-    {% assign notes = entry.note | split: ';' %}
-    <div class="tags">
-    {% for note in notes %}
-      {% assign tag_parts = note | split: ':' %}
-      {% if tag_parts.size > 1 %}
-        <span class="tag">{{ tag_parts[1] | strip | capitalize }}</span>
-      {% endif %}
-    {% endfor %}
-    </div>
-  {% endif %}
 </div>

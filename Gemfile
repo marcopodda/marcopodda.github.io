@@ -42,7 +42,6 @@ gem "addressable"
 gem "bibtex-ruby"
 gem "citeproc-ruby"
 gem "csl-styles"
-gem "jekyll-scholar"
 
 # Optional: other useful Jekyll plugins often used by academic sites
 gem "jekyll-sitemap"   # For generating sitemap.xml

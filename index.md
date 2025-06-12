@@ -1,13 +1,13 @@
 ---
-layout: default # Use your default layout
+layout: default
 title: Marco Podda - Researcher # A good title for your homepage
 ---
 
 <section class="hero-section">
-  <div class="container">
+  <div class="container hero-content-wrapper">
     <h1>Hello, I'm Marco Podda.</h1>
     <p class="tagline">
-      My main research interest is on <b>Machine Learning for graphs</b>. My work focuses on explainability of graph data and graph generation, with applications in Biology.
+      I work on <b>Machine Learning for graphs</b>.<br>My work focuses on explainability of graph data and graph generation,<br>with applications in the biological sciences.
     </p>
     <p>
       Currently, I am Assistant Professor (RTD-A) at the Department of Computer Science of the University of Pisa.
@@ -16,7 +16,7 @@ title: Marco Podda - Researcher # A good title for your homepage
 </section>
 
 <section class="quick-links">
-  <div class="container">
+  <div class="container constrained-content">
     <h2>Explore My Work and Profile</h2>
     <ul>
       <li>
@@ -32,7 +32,7 @@ title: Marco Podda - Researcher # A good title for your homepage
         <p>Learn about the courses I've taught.</p>
       </li>
       <li>
-        <h3><a href="mailto:your.email@example.com">Contact Me</a></h3>
+        <h3><a href="mailto:marco.podda@unipi.it">Contact Me</a></h3>
         <p>Reach out for collaborations or inquiries.</p>
       </li>
     </ul>

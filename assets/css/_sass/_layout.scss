@@ -1,0 +1,19 @@
+/* _layout.scss */
+
+// This class will constrain the main content on pages where it's applied.
+.constrained-content {
+    max-width: 900px; /* Main content width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--spacing-lg) var(--spacing-md); /* Top/bottom padding for section spacing, left/right for margins */
+
+    @media (max-width: 768px) {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+}
+
+// Basic padding for the main semantic tag
+main {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+}
