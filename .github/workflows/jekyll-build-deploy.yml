@@ -29,7 +29,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.x" # Use a recent Ruby 3.x version, matching your local
+          ruby-version: "3.2.2" # Use a recent Ruby 3.x version, matching your local
           bundler-cache: true # Install dependencies with Bundler
       - name: Build Jekyll site
         run: bundle exec jekyll build --incremental
