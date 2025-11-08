@@ -155,6 +155,46 @@
   tags:
   - published
   - journal
+- id: ml2025xai
+  type: Journal
+  title: Bridging XAI and spectral analysis to investigate the inductive biases of
+    deep graph networks
+  journal: Machine Learning
+  volume: '114'
+  number: '257'
+  DOI: 10.1007/s10994-025-06884-0
+  year: 2025
+  authors: M. Fontanesi, A. Micheli, M. Podda, D. Tortorella
+  tags:
+  - published
+  - journal
+- id: ml2025quant
+  type: Journal
+  title: Efficient Quantification on Large-Scale Networks
+  journal: Machine Learning (accepted)
+  volume: '114'
+  number: '270'
+  DOI: 10.1007/s10994-025-06915-w
+  code: https://github.com/marcopodda/network-quantification
+  year: 2025
+  authors: A. Micheli, A. Moreo, M. Podda, F. Sebastiani, W. Simoni, D. Tortorella
+  tags:
+  - published
+  - journal
+- id: merini2025osnem
+  type: Journal
+  title: Misinformation mitigation in online social networks using continual learning
+    with graph neural networks
+  journal: Online Social Networks and Media
+  volume: '50'
+  pages: '100340'
+  DOI: 10.1016/j.osnem.2025.100340
+  issn: 2468-6964
+  year: 2025
+  authors: H. Merini, A. I. E. Hosni, K. Beghdad Bey, V. Lomonaco, M. Podda, I. Baira
+  tags:
+  - published
+  - journal
 - id: miglior2025esann
   type: Conference
   title: Towards Efficient Molecular Property Optimization with Graph Energy Based
@@ -382,6 +422,31 @@
   DOI: 10.1007/978-3-031-94139-9_14
   year: 2025
   authors: D. Tortorella, M. Fontanesi, A. Micheli, M. Podda
+  tags:
+  - published
+  - conference
+- id: ninniri2025neurips
+  type: Conference
+  title: Graph Diffusion that can Insert and Delete
+  booktitle: Advances in Neural Information Processing Systems
+  code: https://github.com/mninniri/GrIDDD
+  year: 2025
+  authors: M. Ninniri, M. Podda, D. Bacciu
+  tags:
+  - accepted
+  - conference
+- id: baccheschi2025icann
+  type: Conference
+  title: Investigating Time-Scales in Deep Echo State Networks for Natural Language
+    Processing
+  booktitle: Artificial Neural Networks and Machine Learning. ICANN 2025 International
+    Workshops and Special Sessions
+  publisher: Springer Nature Switzerland
+  pages: 188–200
+  DOI: 10.1007/978-3-032-04552-2_18
+  year: 2025
+  authors: C. Baccheschi, A. Bondielli, A. Lenci, A. Micheli, L. Passaro, M. Podda,
+    D. Tortorella
   tags:
   - published
   - conference

@@ -11,25 +11,22 @@
 import re
 from pathlib import Path
 
-import yaml
-from pybtex.database import parse_file
-
+import yaml  # type:ignore
+from pybtex.database import parse_file  # type:ignore
 
 
 def infer_type(presort):
-    if presort == "aa":
+    if presort == "A":
         return "Book Chapter"
-    elif presort == "bb":
+    elif presort == "B":
         return "Journal"
-    elif presort == "cc":
+    elif presort == "C":
         return "Conference"
-    elif presort == "dd":
+    elif presort == "D":
         return "Abstract"
-    elif presort == "ee":
+    elif presort == "E":
         return "Thesis"
     raise ValueError(f"Unknown presort {presort}")
-
-
 
 
 def _clean_latex_string(text):
@@ -176,7 +173,9 @@ def bib_to_yaml_converter(bib_file_path, yaml_file_path):
         ]
         for field in common_fields:
             if field in entry.fields:
-                pub_dict[field] = _clean_latex_string(entry.fields[field])  # Apply cleaning
+                pub_dict[field] = _clean_latex_string(
+                    entry.fields[field]
+                )  # Apply cleaning
 
         if "year" in entry.fields:
             try:
@@ -217,7 +216,9 @@ def bib_to_yaml_converter(bib_file_path, yaml_file_path):
                 if person.last_names:
                     name_parts.extend(person.last_names)
                 formatted_editors.append(" ".join(name_parts))
-            pub_dict["authors"] = _clean_latex_string(", ".join(formatted_editors) + " (Ed.)")
+            pub_dict["authors"] = _clean_latex_string(
+                ", ".join(formatted_editors) + " (Ed.)"
+            )
 
         if "note" in entry.fields:
             notes_field = entry.fields["note"]
@@ -243,9 +244,9 @@ def bib_to_yaml_converter(bib_file_path, yaml_file_path):
                 sort_keys=False,
             )
         print(
-            f"Successfully converted {len(publications)} entries from '{bib_file_path}' to '{
-                yaml_file_path
-            }'"
+            f"Successfully converted {len(publications)} entries from '{
+                bib_file_path
+            }' to '{yaml_file_path}'"
         )
     except IOError as e:
         print(f"Error writing YAML file: {e}")
