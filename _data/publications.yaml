@@ -162,6 +162,7 @@
   journal: Machine Learning
   volume: '114'
   number: '257'
+  url: https://link.springer.com/article/10.1007/s10994-025-06884-0
   DOI: 10.1007/s10994-025-06884-0
   year: 2025
   authors: M. Fontanesi, A. Micheli, M. Podda, D. Tortorella
@@ -174,6 +175,7 @@
   journal: Machine Learning (accepted)
   volume: '114'
   number: '270'
+  url: https://link.springer.com/article/10.1007/s10994-025-06915-w
   DOI: 10.1007/s10994-025-06915-w
   code: https://github.com/marcopodda/network-quantification
   year: 2025
@@ -188,6 +190,7 @@
   journal: Online Social Networks and Media
   volume: '50'
   pages: '100340'
+  url: https://www.sciencedirect.com/science/article/abs/pii/S2468696425000412
   DOI: 10.1016/j.osnem.2025.100340
   issn: 2468-6964
   year: 2025
